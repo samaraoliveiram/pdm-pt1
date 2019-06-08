@@ -5,6 +5,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { Tab2Page } from "./tab2.page";
 import { MovieFormComponent } from "../components/movie-form/movie-form.component";
+import { CameraComponent } from "../components/camera/camera.component";
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { MovieFormComponent } from "../components/movie-form/movie-form.componen
     FormsModule,
     RouterModule.forChild([{ path: "", component: Tab2Page }])
   ],
-  declarations: [Tab2Page, MovieFormComponent]
+  declarations: [Tab2Page, MovieFormComponent, CameraComponent]
 })
 export class Tab2PageModule {}

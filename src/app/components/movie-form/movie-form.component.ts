@@ -12,7 +12,7 @@ import { MovieService } from "src/app/services/movie.service";
 export class MovieFormComponent implements OnInit {
   movie: Movie = {
     name: "",
-    imdb: 7
+    imdb: 0
   };
 
   movieId = null;
@@ -29,6 +29,12 @@ export class MovieFormComponent implements OnInit {
     if (this.movieId) {
       this.loadMovie();
     }
+  }
+
+  onPhoted(foto: string) {
+    var corta = foto;
+    this.movie.img = foto;
+    console.log(foto.length);
   }
 
   async loadMovie() {
@@ -50,10 +56,16 @@ export class MovieFormComponent implements OnInit {
     await loading.present();
 
     if (this.movieId) {
-      this.movieService.updateMovie(this.movie, this.movieId).then(() => {
-        loading.dismiss();
-        this.nav.navigateBack("/tabs/tab1");
-      });
+      this.movieService
+        .updateMovie(this.movie, this.movieId)
+        .then(() => {
+          loading.dismiss();
+          this.nav.navigateBack("/tabs/tab1");
+        })
+        .catch(e => {
+          console.log(e);
+          loading.dismiss();
+        });
     } else {
       this.movieService.addMovie(this.movie).then(() => {
         loading.dismiss();

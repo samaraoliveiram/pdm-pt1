@@ -8,19 +8,6 @@ import {
   AngularFirestoreCollection
 } from "angularfire2/firestore";
 
-const Movies: Movie[] = [
-  { id: 11, name: "Dr Nice", imdb: 6 },
-  { id: 12, name: "Narco", imdb: 7 },
-  { id: 13, name: "Bombasto", imdb: 8 },
-  { id: 14, name: "Celeritas", imdb: 9 },
-  { id: 15, name: "Magneta", imdb: 9 },
-  { id: 16, name: "RubberMan", imdb: 9 },
-  { id: 17, name: "Dynama", imdb: 9 },
-  { id: 18, name: "Dr IQ", imdb: 9 },
-  { id: 19, name: "Magma", imdb: 8 },
-  { id: 20, name: "Tornado", imdb: 6 }
-];
-
 @Injectable({
   providedIn: "root"
 })

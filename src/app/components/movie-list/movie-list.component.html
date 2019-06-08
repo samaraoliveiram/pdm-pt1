@@ -12,9 +12,9 @@
         <ion-item button [routerLink]="['/tabs/details', movie.id]" lines="inset">
             <ion-label>
                 {{movie.name}} Details
-                <div><span>id: </span>{{movie.id}}</div>
                 <div><span>name: </span>{{movie.name}}</div>
                 <div><span>imdb: </span>{{movie.imdb}}</div>
+                <ion-img [src]="movie.img"></ion-img>
             </ion-label>
         </ion-item>
 

@@ -16,5 +16,6 @@
       <ion-input required type="number" placeholder="imdb" [(ngModel)]="movie.imdb"></ion-input>
     </ion-item>
   </ion-list>
+  <app-camera [foto]="movie.img" (photed)="onPhoted($event)"></app-camera>
   <ion-button expand="full" (click)="saveMovie()">Save</ion-button>
 </ion-content>
